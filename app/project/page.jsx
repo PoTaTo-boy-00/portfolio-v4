@@ -18,7 +18,7 @@ const projects = [
     stack: ["shadcn/ui", "Next.js"],
     live: "https://ayanangshu-portfolio.vercel.app/",
     github: "https://github.com",
-    image: "/assets/project/Screenshot 2025-02-07 084509.png",
+    image: "",
   },
   {
     title: "ChatApp",
