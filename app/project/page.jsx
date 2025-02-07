@@ -18,7 +18,7 @@ const projects = [
     stack: ["shadcn/ui", "Next.js"],
     live: "/",
     github: "https://github.com",
-    image: "/assets/work/thumb1.png",
+    image: "",
   },
   {
     title: "ChatApp",
@@ -27,7 +27,7 @@ const projects = [
     stack: ["React", "Socket.io", "DaisyUI"],
     live: "https://github.com",
     github: "https://github.com",
-    image: "/assets/work/thumb1.png",
+    image: "",
   },
 
   {
@@ -37,7 +37,7 @@ const projects = [
     stack: ["Next.js", "Hono", "Prisma"],
     live: "https://github.com",
     github: "https://github.com",
-    image: "/assets/work/thumb1.png",
+    image: "",
   },
 ];
 
