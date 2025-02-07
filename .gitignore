@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+components\Stats.jsx
+app\aboutMe
+components\Stairs.jsx
+components\StairTransition.jsx
