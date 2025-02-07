@@ -16,9 +16,9 @@ const projects = [
     description:
       "A Portfolio to showcase my skills and projects, using <Aceternity UI/> and <Framer Motion/>",
     stack: ["shadcn/ui", "Next.js"],
-    live: "/",
+    live: "https://ayanangshu-portfolio.vercel.app/",
     github: "https://github.com",
-    image: "",
+    image: "/assets/project/Screenshot 2025-02-07 084509.png",
   },
   {
     title: "ChatApp",

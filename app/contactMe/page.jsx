@@ -3,7 +3,7 @@
 // import emailjs from "@emailjs/browser";
 import emailjs from "emailjs-com";
 import { Button } from "@/components/ui/button";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { FaEnvelope, FaMapMarkedAlt, FaPhoneAlt } from "react-icons/fa";
 
 const info = [
@@ -24,7 +24,7 @@ const info = [
   },
 ];
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -36,10 +36,13 @@ const page = () => {
   const phoneNumberRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
+  const [alertVisible, setAlertVisible] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    // console.log("true");
+    // setAlertVisible(true);
+    // setTimeout(() => setAlertVisible(false), 1200);
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -50,11 +53,17 @@ const page = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          setAlertVisible(true);
+          setTimeout(() => setAlertVisible(false), 3000);
         },
         (error) => {
           console.log("FAILED...", error.text);
         }
       );
+
+    if (form.current) {
+      form.current.reset();
+    }
   };
   return (
     <motion.section
@@ -69,6 +78,19 @@ const page = () => {
         <div className="flex flex-col items-center justify-center xl:flex-row gap-[30px]">
           {/* form */}
           <div className=" xl:h-[54%]  xl:order-none">
+            <AnimatePresence>
+              {alertVisible && (
+                <motion.div
+                  initial={{ opacity: 0, y: -50 }} // Start off-screen (higher up)
+                  animate={{ opacity: 1, y: 0 }} // Fully visible and in place
+                  exit={{ opacity: 0, y: -50 }} // Move back up when exiting
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="mb-4 p-4 bg-green-500 text-white rounded-md shadow-lg"
+                >
+                  Message sent successfully!
+                </motion.div>
+              )}
+            </AnimatePresence>
             <form
               className="flex flex-col gap-6 p-3 bg-[#27272c] rounded-xl"
               onSubmit={handleSubmit}
@@ -94,7 +116,7 @@ const page = () => {
                   ref={lastNameRef}
                 />
                 <Input
-                  type="number"
+                  type="tel"
                   placeholder="Phone Number"
                   name="phoneNumber"
                   ref={phoneNumberRef}
@@ -109,7 +131,7 @@ const page = () => {
               {/* textarea */}
               <Textarea
                 className="w-full min-h-[180px] rounded-[10px] bg-[#18181b] border-2 
-    border-white/20 px-6 py-4 outline-none text-white 
+    border-white/20 px-6 py-4 outline-none text-white
     placeholder:text-white/30 hover:border-white/40 
     focus:border-accent focus:ring-0 focus:bg-transparent 
     transition-all duration-300 resize-none
