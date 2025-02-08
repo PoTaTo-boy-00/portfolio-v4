@@ -25,8 +25,8 @@ const projects = [
     description:
       "A RealTime Chat Application that allows users to create rooms and chat with each other",
     stack: ["React", "Socket.io", "DaisyUI"],
-    live: "https://github.com",
-    github: "https://github.com",
+    live: "https://chat-app-n4z2.onrender.com/",
+    github: "https://github.com/PoTaTo-boy-00/Chat-App",
     image: "",
   },
 
