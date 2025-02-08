@@ -16,14 +16,14 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <h1 className="text-4xl font-semibold ">
-            <span>\</span>
+            {/* <span>\</span> */}
             <Link
               href="https://github.com/PoTaTo-boy-00"
               className="hover:text-accent cursor-pointer"
             >
               Potatooo
             </Link>
-            <span>/</span> <span className="text-accent">.</span>
+            {/* <span>/</span> <span className="text-accent">.</span> */}
           </h1>
         </Link>
         {/* nav */}

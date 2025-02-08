@@ -7,49 +7,6 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Link from "next/link";
 
-const skills = [
-  {
-    title: "JavaScript",
-    // icon: <SiJavascript />,
-  },
-  {
-    title: "TypeScript",
-    // icon: <SiTypescript />,
-  },
-  {
-    title: "React",
-    // icon: <FaReact />,
-  },
-  {
-    title: "Next.js",
-    // icon: <SiNextdotjs />,
-  },
-  {
-    title: "Node.js",
-    // icon: <FaNodeJs />,
-  },
-  {
-    title: "Tailwind CSS",
-    // icon: <SiTailwindcss />,
-  },
-  {
-    title: "HTML5",
-    // icon: <HiCode />,
-  },
-  {
-    title: "CSS3",
-    // icon: <HiCode />,
-  },
-  {
-    title: "Git",
-    // icon: <HiCode />,
-  },
-  {
-    title: "Docker",
-    // icon: <HiCode />,
-  },
-];
-
 const Home = () => {
   const handleDirectDownload = (url) => {
     window.open(url, "_blank");

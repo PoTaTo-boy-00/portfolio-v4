@@ -15,9 +15,9 @@ const projects = [
     title: "\\Potato/",
     description:
       "A Portfolio to showcase my skills and projects, using <Aceternity UI/> and <Framer Motion/>",
-    stack: ["shadcn/ui", "Next.js"],
+    stack: ["shadcn/ui", "Next.js", "Email.js"],
     live: "https://ayanangshu-portfolio.vercel.app/",
-    github: "https://github.com",
+    github: "https://github.com/PoTaTo-boy-00/portfolio-v4",
     image: "",
   },
   {
