@@ -39,6 +39,14 @@ const projects = [
     github: "https://github.com",
     image: "",
   },
+  {
+    title: "COLLAB",
+    description: "A collaborative platform that allows users to work together",
+    stack: ["Next.js", "LiveBlocks", "Typescript"],
+    // live: "https://github.com",
+    github: "https://https://github.com/PoTaTo-boy-00/COLLAB.com",
+    image: "",
+  },
 ];
 
 const Skeleton = ({ liveLink, githubLink }) => (
