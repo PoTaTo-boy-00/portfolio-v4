@@ -44,7 +44,7 @@ const projects = [
     description: "A collaborative platform that allows users to work together",
     stack: ["Next.js", "LiveBlocks", "Typescript"],
     // live: "https://github.com",
-    github: "https://https://github.com/PoTaTo-boy-00/COLLAB.com",
+    github: "https://github.com/PoTaTo-boy-00/COLLAB.com",
     image: "",
   },
 ];
