@@ -8,7 +8,9 @@ import MobileNav from "./MobileNav";
 import { FiDownload } from "../node_modules/react-icons/fi";
 
 const Header = () => {
-  const handleDownload = (url) => {
+  const handleDownload = () => {
+    const url =
+      "https://asset.cloudinary.com/dd3wlco6o/8f0288ac75e503d83ebb37acae25f56d?fl_attachment";
     window.open(url, "_blank");
   };
   return (
@@ -30,7 +32,7 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-8">
           <Nav />
           <Link href="/">
-            <Button onClick={() => handleDownload("/dummy.pdf")}>
+            <Button onClick={handleDownload}>
               Resume <FiDownload className="m-1" />
             </Button>
           </Link>

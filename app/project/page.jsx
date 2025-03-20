@@ -29,7 +29,6 @@ const projects = [
     github: "https://github.com/PoTaTo-boy-00/Chat-App",
     image: "",
   },
-
   {
     title: "Medium",
     description:
@@ -43,38 +42,41 @@ const projects = [
     title: "COLLAB",
     description: "A collaborative platform that allows users to work together",
     stack: ["Next.js", "LiveBlocks", "Typescript"],
-    // live: "https://github.com",
-    github: "https://https://github.com/PoTaTo-boy-00/COLLAB.com",
+    github: "https://github.com/PoTaTo-boy-00/COLLAB", // Fixed URL
     image: "",
   },
 ];
 
 const Skeleton = ({ liveLink, githubLink }) => (
   <div className="flex gap-4 mt-4 items-center">
-    <Link href={liveLink}>
-      <TooltipProvider delayDuration={100}>
-        <Tooltip>
-          <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
-            <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Live project</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-    </Link>
-    <Link href={githubLink}>
-      <TooltipProvider delayDuration={100}>
-        <Tooltip>
-          <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
-            <BsGithub className="text-white text-3xl group-hover:text-accent" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Github</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-    </Link>
+    {liveLink && (
+      <Link href={liveLink}>
+        <TooltipProvider delayDuration={100}>
+          <Tooltip>
+            <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
+              <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Live project</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </Link>
+    )}
+    {githubLink && (
+      <Link href={githubLink}>
+        <TooltipProvider delayDuration={100}>
+          <Tooltip>
+            <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
+              <BsGithub className="text-white text-3xl group-hover:text-accent" />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Github</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </Link>
+    )}
   </div>
 );
 
