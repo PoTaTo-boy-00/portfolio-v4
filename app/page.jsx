@@ -8,7 +8,10 @@ import Stats from "@/components/Stats";
 import Link from "next/link";
 
 const Home = () => {
-  const handleDirectDownload = (url) => {
+  const handleDirectDownload = () => {
+    const url =
+      "https://asset.cloudinary.com/dd3wlco6o/8f0288ac75e503d83ebb37acae25f56d?fl_attachment";
+    console.log(url);
     window.open(url, "_blank");
   };
 
@@ -33,11 +36,7 @@ const Home = () => {
             <div className="flex flex-col xl:flex-row items-center gap-8">
               {/* <a href="/photo.png" download={true} className="inline-flex"> */}
               <Button
-                onClick={() =>
-                  handleDirectDownload(
-                    "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                  )
-                }
+                onClick={handleDirectDownload}
                 className="h-[56px] px-8 text-sm uppercase tracking-[2px]
                 md:hidden
           inline-flex items-center justify-center gap-2
